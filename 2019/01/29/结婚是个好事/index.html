@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
+<meta name="description" content="你把你密码给我交了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="结婚是个好事">
 <meta property="og:url" content="http://yoursite.com/2019/01/29/结婚是个好事/index.html">
 <meta property="og:site_name" content="Rsw">
-<meta property="og:description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
+<meta property="og:description" content="你把你密码给我交了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-31T08:34:49.197Z">
+<meta property="og:updated_time" content="2019-01-31T08:43:57.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="结婚是个好事">
-<meta name="twitter:description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
+<meta name="twitter:description" content="你把你密码给我交了。">
 
 
 
@@ -299,46 +299,20 @@
       
 
       
-        <script src="/js/crypto-js.js"></script>
-<script>
-function doDecrypt (pwd, onError) {
-	console.log('in doDecrypt');
-	const txt = document.getElementById('enc_content').innerHTML;
-	let plantext;
-	try {
-		const bytes = CryptoJS.AES.decrypt(txt, pwd);
-		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
-	} catch(err) {
-		if(onError) {
-			onError(err);
-		}
-		return;
-	}
-	document.getElementById('enc_content').innerHTML = plaintext;
-	document.getElementById('enc_content').style.display = 'block';
-	document.getElementById('enc_passwd').style.display = 'none';
-	if(typeof MathJax !== 'undefined') {
-		MathJax.Hub.Queue(
-			['resetEquationNumbers', MathJax.InputJax.TeX],
-			['PreProcess', MathJax.Hub],
-			['Reprocess', MathJax.Hub]
-		);
-	}
-}
-</script>
-<div id="enc_content" style="display:none">U2FsdGVkX1+2SfItoYDIsSrN9QDRXEjwPN53GX7sggdvjX6nnGOXHRt96jNFWR39gbjbUzr3oKFwojWRD9KkTGo94e/ta8R+mC9OTTQeTlW2tn7GkyDNmYxQMKT0rxPloq5NygGI9WtkdsVzt/hdAVw+M9U7V7aTe/6gO7iCDehPnv4ZttzoVzzL1GB5QeBb8pZxqPSo0kYzv17k4BGm/RoxdtGy87v4W1vugLR/FVarDsindc2A84qn1fetJqy5oU/EgzO+Wvo+t0Scm6m2jV0gDbRuThngrzqpfn/Cg+aOEyijNTlHMQk35agHkrNmG1GDlxyFd0SKIITs7Uf18reiU5Ny0inrer8HKBTohjzuQ4ZecbSsQUfSErVuCjw02bx8XiqKFQgXVB5fKD/kJAFX2RotulA/LeoZ9MBQb8Zbv/cr8Bbf5y6nsAjRPuW2/lulpLtkIruaYitNwLZ85jRBIfYJrF65wa8uEwRdr5NGjIW3+EKdaY+GV7MwneEn4xpZzXo8PEJyCs4GtPf3/awVyexIi6ljO0OkXQXKmX7DDacwuJ0TOwreT64j6WpM0/FCyA6UacpUpBQ8pKbrTlKL5b3nvgZZKMh77nE03bpVtHtKnu1FMnrCbyZASWLTfr0Jnm/0Q6Z9RlMzIA59dFBqt1yfj0ZVhIl2StO64/FkMqUM9yrQApQDMFsRfDHmQp/vldfYycsmuSMXMshKVJS+WPxwX6eyOGkfJmIFx/+eAHBSquRA53sWYxBCErIFy/Ll/IxTBm4CkIhyRylprlghuesV4EhaYXAzOzAviZ5Y/5IeZNUy35kl8up43DazUTVB/dlw6yj4VVBQP8/YyR0NosGzRA0+5ISdXsWWZtMyB3q3vVPpFP70ZuctmG7rpNtGJMrkyESgZ+DPtEJZHqBWfvJeD6tmSKobB4U+0Cy7WzNNxR7TzQUDlT9H+wi6/B49maPhcKbWstkdtuVnIEOoO0Uw3CgvEcPrKMFf7SK0/9Ga6O/EPLknOX1HuCZI7KXAsVJHX6pQdbzcyUk5zOybmqqh+r+fHGBsC66i7Q2L4WkFTYkoRbZjGnu1CHD/KD9qLF7uvGMndJ13m59qsCkjCKml2+UMleLmBm+GNRU2u+UnujVcyBxrp670kmBAfng5tHT36KFei6E753Zd2NW1xiGHacy/jVzvOf6Gr2N/FbDyISWUqWMVJ4xn1oqu8eHtc8bkOhIILQZPzumCGv+74LbCYnN1AhQmAfFYyxsuaNbc8ipa4KDt0R9YGkvdVxYzrDj2lDRlV65mst0VSte2USkiD8o8Gcvb0YS82i6p4kS8e8eV1v7DoMnhT+VQ0Peyxs/l1W9L0taCDapUyA==</div>
-<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
-<script>
-var onError = function(error) {
-	document.getElementById("enc_error").innerHTML = "password error!"
-};
-function decrypt() {
-var passwd = document.getElementById("enc_pwd_input").value;
-console.log(passwd);
-doDecrypt(passwd, onError);
-}
-</script>
+        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="输入密码，GKD！">
+    <label for="pass">输入密码，GKD！</label>
+    <div class="bottom-line"></div>
+  </div>
 </div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
     
@@ -362,7 +336,7 @@ doDecrypt(passwd, onError);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/29/2019-1-29/" rel="next" title="始终是你们">
+              <a href="/2019/01/29/始终是你们/" rel="next" title="始终是你们">
                 <i class="fa fa-chevron-left"></i> 始终是你们
               </a>
             
