@@ -422,11 +422,46 @@
       
         
           
-            <p>为什么今天有两篇呢？因为今天除了和小伙伴们一起去玩耍之外，还有一个重要的事情——<strong>我强强叔今天结婚了!</strong>   </p>
-<p>虽然说我和强强叔的交情没有我另外几个堂哥多，因为我和他们年龄差了几岁，他们一起玩的时候我还小，等我稍微长大一点之后搬家了。虽然不是很熟，但我总归是一个感情蛮多人，即使是血缘关系也能让我发觉一些情怀。   </p>
-<p>虽然家里不算富有，但日子总是要过的，穷有穷的活法，富有富的活法。人不会因为活法的不同而产生本质的差异，一个富人是不会大于一个穷人的，人的不同来源于个人本身对自己的看法。为什么说<strong>哀其不幸，怒其不争</strong>,最可怕的不是穷，而是活该穷。</p>
-<p>今天因为别的事情没有去好好参加婚宴还是很惋惜的，就在这里衷心祝福这对新人能<strong>圆圆满满，白头偕老</strong>。</p>
-
+            <script src="/js/crypto-js.js"></script>
+<script>
+function doDecrypt (pwd, onError) {
+	console.log('in doDecrypt');
+	const txt = document.getElementById('enc_content').innerHTML;
+	let plantext;
+	try {
+		const bytes = CryptoJS.AES.decrypt(txt, pwd);
+		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+	} catch(err) {
+		if(onError) {
+			onError(err);
+		}
+		return;
+	}
+	document.getElementById('enc_content').innerHTML = plaintext;
+	document.getElementById('enc_content').style.display = 'block';
+	document.getElementById('enc_passwd').style.display = 'none';
+	if(typeof MathJax !== 'undefined') {
+		MathJax.Hub.Queue(
+			['resetEquationNumbers', MathJax.InputJax.TeX],
+			['PreProcess', MathJax.Hub],
+			['Reprocess', MathJax.Hub]
+		);
+	}
+}
+</script>
+<div id="enc_content" style="display:none">U2FsdGVkX1+2SfItoYDIsSrN9QDRXEjwPN53GX7sggdvjX6nnGOXHRt96jNFWR39gbjbUzr3oKFwojWRD9KkTGo94e/ta8R+mC9OTTQeTlW2tn7GkyDNmYxQMKT0rxPloq5NygGI9WtkdsVzt/hdAVw+M9U7V7aTe/6gO7iCDehPnv4ZttzoVzzL1GB5QeBb8pZxqPSo0kYzv17k4BGm/RoxdtGy87v4W1vugLR/FVarDsindc2A84qn1fetJqy5oU/EgzO+Wvo+t0Scm6m2jV0gDbRuThngrzqpfn/Cg+aOEyijNTlHMQk35agHkrNmG1GDlxyFd0SKIITs7Uf18reiU5Ny0inrer8HKBTohjzuQ4ZecbSsQUfSErVuCjw02bx8XiqKFQgXVB5fKD/kJAFX2RotulA/LeoZ9MBQb8Zbv/cr8Bbf5y6nsAjRPuW2/lulpLtkIruaYitNwLZ85jRBIfYJrF65wa8uEwRdr5NGjIW3+EKdaY+GV7MwneEn4xpZzXo8PEJyCs4GtPf3/awVyexIi6ljO0OkXQXKmX7DDacwuJ0TOwreT64j6WpM0/FCyA6UacpUpBQ8pKbrTlKL5b3nvgZZKMh77nE03bpVtHtKnu1FMnrCbyZASWLTfr0Jnm/0Q6Z9RlMzIA59dFBqt1yfj0ZVhIl2StO64/FkMqUM9yrQApQDMFsRfDHmQp/vldfYycsmuSMXMshKVJS+WPxwX6eyOGkfJmIFx/+eAHBSquRA53sWYxBCErIFy/Ll/IxTBm4CkIhyRylprlghuesV4EhaYXAzOzAviZ5Y/5IeZNUy35kl8up43DazUTVB/dlw6yj4VVBQP8/YyR0NosGzRA0+5ISdXsWWZtMyB3q3vVPpFP70ZuctmG7rpNtGJMrkyESgZ+DPtEJZHqBWfvJeD6tmSKobB4U+0Cy7WzNNxR7TzQUDlT9H+wi6/B49maPhcKbWstkdtuVnIEOoO0Uw3CgvEcPrKMFf7SK0/9Ga6O/EPLknOX1HuCZI7KXAsVJHX6pQdbzcyUk5zOybmqqh+r+fHGBsC66i7Q2L4WkFTYkoRbZjGnu1CHD/KD9qLF7uvGMndJ13m59qsCkjCKml2+UMleLmBm+GNRU2u+UnujVcyBxrp670kmBAfng5tHT36KFei6E753Zd2NW1xiGHacy/jVzvOf6Gr2N/FbDyISWUqWMVJ4xn1oqu8eHtc8bkOhIILQZPzumCGv+74LbCYnN1AhQmAfFYyxsuaNbc8ipa4KDt0R9YGkvdVxYzrDj2lDRlV65mst0VSte2USkiD8o8Gcvb0YS82i6p4kS8e8eV1v7DoMnhT+VQ0Peyxs/l1W9L0taCDapUyA==</div>
+<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<script>
+var onError = function(error) {
+	document.getElementById("enc_error").innerHTML = "password error!"
+};
+function decrypt() {
+var passwd = document.getElementById("enc_pwd_input").value;
+console.log(passwd);
+doDecrypt(passwd, onError);
+}
+</script>
+</div>
           
         
       
