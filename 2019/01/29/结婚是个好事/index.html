@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,9 +45,22 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
 
 
 
@@ -48,65 +68,18 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="你把你密码给我交了。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="结婚是个好事">
-<meta property="og:url" content="http://yoursite.com/2019/01/29/结婚是个好事/index.html">
-<meta property="og:site_name" content="Rsw">
-<meta property="og:description" content="你把你密码给我交了。">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-11T02:12:36.161Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="结婚是个好事">
-<meta name="twitter:description" content="你把你密码给我交了。">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '5.1.4',
+    version: '7.0.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -118,12 +91,37 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="你把你密码给我交了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="结婚是个好事">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/结婚是个好事/index.html">
+<meta property="og:site_name" content="Rsw">
+<meta property="og:description" content="你把你密码给我交了。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-11T02:12:36.161Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="结婚是个好事">
+<meta name="twitter:description" content="你把你密码给我交了。">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2019/01/29/结婚是个好事/">
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>结婚是个好事 | Rsw</title>
   
@@ -135,9 +133,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -149,7 +176,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -159,13 +186,12 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -173,45 +199,72 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            Tags
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            Archives
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -219,12 +272,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -235,6 +296,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -259,25 +322,51 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">结婚是个好事</h1>
+          <h1 class="post-title" itemprop="name headline">结婚是个好事
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-29T22:07:29+08:00">
-                2019-01-29
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-29 22:07:29" itemprop="dateCreated datePublished" datetime="2019-01-29T22:07:29+08:00">2019-01-29</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-11 10:12:36" itemprop="dateModified" datetime="2019-02-11T10:12:36+08:00">2019-02-11</time>
+              
             
           </span>
 
@@ -285,11 +374,15 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/01/29/结婚是个好事/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/01/29/结婚是个好事/" itemprop="commentCount"></span>
                 </a>
@@ -330,17 +423,23 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-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
+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
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -384,22 +483,16 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
-
-          
-
   
     <div class="comments" id="comments">
     </div>
+
   
 
 
@@ -424,7 +517,7 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -432,48 +525,60 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
 
-            
-
-            
               
+
               
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
             
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -490,16 +595,19 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Rsw</span>
 
   
+
+  
 </div>
 
 
- 
+
+
 
 
 
@@ -510,6 +618,7 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
 
 
         
+
 
 
 
@@ -530,11 +639,14 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -548,7 +660,6 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
 
 
 
-  
 
 
 
@@ -561,119 +672,87 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+
+
+
+
 
   
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script src="/js/src/utils.js?v=7.0.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script src="/js/src/motion.js?v=7.0.0"></script>
 
 
 
   
   
 
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+  <script src="/js/src/schemes/muse.js?v=7.0.0"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
 
 
 
   
 
 
-  
-
-
-
-
-	
-
-
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
 
 
 
   
-
-
-
-
-
   
 
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
 
 
 
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'a9x6viu41Qip50JbpPWQuKSR-gzGzoHsz',
+    appKey: 'GB4Ne8PrAQHtpkAfBVvtNIG1',
+    placeholder: '有什么想说的话或者建议可以写下来嗷！',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
 
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'a9x6viu41Qip50JbpPWQuKSR-gzGzoHsz',
-        appKey: 'GB4Ne8PrAQHtpkAfBVvtNIG1',
-        placeholder: '有什么想说的可以告诉我哦！',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
 
 
 
   
 
+
+  
 
 
 
@@ -685,6 +764,17 @@ U2FsdGVkX19SWedYOG0cO3MicYBnykpjtenVorLiBcwju5SheHUt0VKeL2UI88VygzOdDfDVyRYMbOhL
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
